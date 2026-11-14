@@ -1,0 +1,240 @@
+{
+  "domains": [
+    {
+      "domain": "docs.example.com",
+      "verdict": "takeover",
+      "risk": "high",
+      "provider": "github-pages",
+      "claimable": "user",
+      "chain": [
+        "user.github.io"
+      ],
+      "normalized_body": "there isn't a github pages site here.",
+      "matched_fingerprint": "there isn't a github pages site here.",
+      "evidence": "NS: none; CNAME chain: user.github.io; A records: none; HTTP: 404"
+    },
+    {
+      "domain": "old.example.net",
+      "verdict": "takeover",
+      "risk": "high",
+      "provider": "github-pages",
+      "claimable": "user",
+      "chain": [
+        "cdn.example.net",
+        "user.github.io"
+      ],
+      "normalized_body": "there isn't a github pages site here.",
+      "matched_fingerprint": "there isn't a github pages site here.",
+      "evidence": "NS: none; CNAME chain: cdn.example.net -> user.github.io; A records: none; HTTP: 404"
+    },
+    {
+      "domain": "live.example.com",
+      "verdict": "normal",
+      "risk": "none",
+      "provider": null,
+      "claimable": null,
+      "chain": [
+        "user.github.io"
+      ],
+      "normalized_body": "welcome to my site",
+      "matched_fingerprint": null,
+      "evidence": "NS: none; CNAME chain: user.github.io; A records: none; HTTP: 200"
+    },
+    {
+      "domain": "app.example.com",
+      "verdict": "takeover",
+      "risk": "high",
+      "provider": "heroku",
+      "claimable": "myapp",
+      "chain": [
+        "myapp.herokuapp.com"
+      ],
+      "normalized_body": "no such app",
+      "matched_fingerprint": "no such app",
+      "evidence": "NS: none; CNAME chain: myapp.herokuapp.com; A records: none; HTTP: 503"
+    },
+    {
+      "domain": "bare.example.com",
+      "verdict": "dangling",
+      "risk": "medium",
+      "provider": null,
+      "claimable": null,
+      "chain": [],
+      "normalized_body": null,
+      "matched_fingerprint": null,
+      "evidence": "NS: none; CNAME chain: none; A records: none; HTTP: not observed"
+    },
+    {
+      "domain": "cycle-a.example.com",
+      "verdict": "unresolved",
+      "risk": "unknown",
+      "provider": null,
+      "claimable": null,
+      "chain": [
+        "cycle-b.example.com",
+        "cycle-a.example.com"
+      ],
+      "normalized_body": null,
+      "matched_fingerprint": null,
+      "evidence": "NS: none; CNAME chain: cycle-b.example.com -> cycle-a.example.com; A records: none; HTTP: not observed; resolution loop detected at cycle-a.example.com"
+    },
+    {
+      "domain": "shop.example.com",
+      "verdict": "takeover",
+      "risk": "high",
+      "provider": "shopify",
+      "claimable": "shop",
+      "chain": [
+        "shop.myshopify.com"
+      ],
+      "normalized_body": "sorry, this shop is currently unavailable.",
+      "matched_fingerprint": "sorry, this shop is currently unavailable",
+      "evidence": "NS: none; CNAME chain: shop.myshopify.com; A records: none; HTTP: 404"
+    },
+    {
+      "domain": "plain.example.com",
+      "verdict": "normal",
+      "risk": "none",
+      "provider": null,
+      "claimable": null,
+      "chain": [
+        "web.example.org"
+      ],
+      "normalized_body": null,
+      "matched_fingerprint": null,
+      "evidence": "NS: none; CNAME chain: web.example.org; A records: none; HTTP: not observed"
+    },
+    {
+      "domain": "decoy.example.com",
+      "verdict": "normal",
+      "risk": "none",
+      "provider": null,
+      "claimable": null,
+      "chain": [
+        "user.github.io"
+      ],
+      "normalized_body": "404 not found",
+      "matched_fingerprint": null,
+      "evidence": "NS: none; CNAME chain: user.github.io; A records: none; HTTP: 404"
+    },
+    {
+      "domain": "weird.example.com",
+      "verdict": "normal",
+      "risk": "none",
+      "provider": null,
+      "claimable": null,
+      "chain": [
+        "user.github.io"
+      ],
+      "normalized_body": "there isn't a github pages site here.",
+      "matched_fingerprint": "there isn't a github pages site here.",
+      "evidence": "NS: none; CNAME chain: user.github.io; A records: none; HTTP: 200"
+    },
+    {
+      "domain": "deadns.example.com",
+      "verdict": "dangling",
+      "risk": "medium",
+      "provider": null,
+      "claimable": null,
+      "chain": [],
+      "normalized_body": null,
+      "matched_fingerprint": null,
+      "evidence": "NS: ns1.dead.example.org (dead, does not resolve); CNAME chain: none; A records: none; HTTP: not observed"
+    },
+    {
+      "domain": "busy.example.com",
+      "verdict": "normal",
+      "risk": "none",
+      "provider": null,
+      "claimable": null,
+      "chain": [
+        "user.github.io"
+      ],
+      "normalized_body": "there isn't a github pages site here.",
+      "matched_fingerprint": "there isn't a github pages site here.",
+      "evidence": "NS: none; CNAME chain: user.github.io; A records: 203.0.113.10; HTTP: 404"
+    },
+    {
+      "domain": "root.example.com",
+      "verdict": "normal",
+      "risk": "none",
+      "provider": null,
+      "claimable": null,
+      "chain": [
+        "github.io"
+      ],
+      "normalized_body": "there isn't a github pages site here.",
+      "matched_fingerprint": "there isn't a github pages site here.",
+      "evidence": "NS: none; CNAME chain: github.io; A records: none; HTTP: 404"
+    },
+    {
+      "domain": "redir.example.com",
+      "verdict": "normal",
+      "risk": "none",
+      "provider": null,
+      "claimable": null,
+      "chain": [
+        "user.github.io"
+      ],
+      "normalized_body": "there isn't a github pages site here.",
+      "matched_fingerprint": null,
+      "evidence": "NS: none; CNAME chain: user.github.io; A records: none; HTTP: 302 (redirect not followed; location: https://github.com/login)"
+    }
+  ],
+  "findings": [
+    {
+      "domain": "docs.example.com",
+      "verdict": "takeover",
+      "risk": "high"
+    },
+    {
+      "domain": "old.example.net",
+      "verdict": "takeover",
+      "risk": "high"
+    },
+    {
+      "domain": "app.example.com",
+      "verdict": "takeover",
+      "risk": "high"
+    },
+    {
+      "domain": "bare.example.com",
+      "verdict": "dangling",
+      "risk": "medium"
+    },
+    {
+      "domain": "cycle-a.example.com",
+      "verdict": "unresolved",
+      "risk": "unknown"
+    },
+    {
+      "domain": "shop.example.com",
+      "verdict": "takeover",
+      "risk": "high"
+    },
+    {
+      "domain": "deadns.example.com",
+      "verdict": "dangling",
+      "risk": "medium"
+    }
+  ],
+  "summary": {
+    "domains": 14,
+    "takeover": 4,
+    "dangling": 2,
+    "unresolved": 1,
+    "normal": 7,
+    "by_provider": {
+      "github-pages": 2,
+      "heroku": 1,
+      "shopify": 1
+    },
+    "by_risk": {
+      "high": 4,
+      "medium": 2,
+      "unknown": 1,
+      "none": 7
+    },
+    "accounts": 3
+  }
+}

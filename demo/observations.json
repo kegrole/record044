@@ -1,0 +1,18 @@
+{
+  "domains": [
+    {"domain": "docs.example.com", "ns": [], "cname_chain": ["user.github.io"], "a": [], "http": {"status": 404, "body": "<html><body>There isn&apos;t a GitHub Pages site here.</body></html>", "location": null}},
+    {"domain": "old.example.net", "ns": [], "cname_chain": ["CDN.Example.NET.", "user.github.io"], "a": [], "http": {"status": 404, "body": "<p>there isn't a   github pages site here.</p>", "location": null}},
+    {"domain": "live.example.com", "ns": [], "cname_chain": ["user.github.io"], "a": [], "http": {"status": 200, "body": "<h1>Welcome to my site</h1>", "location": null}},
+    {"domain": "app.example.com", "ns": [], "cname_chain": ["myapp.herokuapp.com"], "a": [], "http": {"status": 503, "body": "<h1>No such app</h1>", "location": null}},
+    {"domain": "bare.example.com", "ns": [], "cname_chain": [], "a": [], "http": null},
+    {"domain": "cycle-a.example.com", "ns": [], "cname_chain": ["cycle-b.example.com", "cycle-a.example.com"], "a": [], "http": null},
+    {"domain": "shop.example.com", "ns": [], "cname_chain": ["shop.myshopify.com"], "a": [], "http": {"status": 404, "body": "<div>Sorry, this shop is currently unavailable.</div>", "location": null}},
+    {"domain": "plain.example.com", "ns": [], "cname_chain": ["web.example.org"], "a": [], "http": null},
+    {"domain": "decoy.example.com", "ns": [], "cname_chain": ["user.github.io"], "a": [], "http": {"status": 404, "body": "<h1>404 Not Found</h1>", "location": null}},
+    {"domain": "weird.example.com", "ns": [], "cname_chain": ["user.github.io"], "a": [], "http": {"status": 200, "body": "<p>There isn't a GitHub Pages site here.</p>", "location": null}},
+    {"domain": "deadns.example.com", "ns": [{"name": "ns1.dead.example.org", "resolves": false}], "cname_chain": [], "a": [], "http": null},
+    {"domain": "busy.example.com", "ns": [], "cname_chain": ["user.github.io"], "a": ["203.0.113.10"], "http": {"status": 404, "body": "<p>There isn't a GitHub Pages site here.</p>", "location": null}},
+    {"domain": "root.example.com", "ns": [], "cname_chain": ["github.io"], "a": [], "http": {"status": 404, "body": "<p>There isn't a GitHub Pages site here.</p>", "location": null}},
+    {"domain": "redir.example.com", "ns": [], "cname_chain": ["user.github.io"], "a": [], "http": {"status": 302, "body": "<p>There isn't a GitHub Pages site here.</p>", "location": "https://github.com/login"}}
+  ]
+}
